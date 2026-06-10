@@ -1,0 +1,64 @@
+/* Scope everything to this page only */
+.total-page {
+    font-family: Arial, sans-serif;
+}
+
+/* Form container */
+.total-page form {
+    width: 420px;
+    margin: 80px auto;
+    padding: 25px;
+    background-color: #ffffff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+}
+
+/* Heading */
+.total-page h1 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Labels */
+.total-page label {
+    display: block;
+    margin-top: 12px;
+    font-weight: bold;
+}
+
+/* Select dropdown */
+.total-page select {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+}
+
+/* Button */
+.total-page input[type="submit"] {
+    width: 100%;
+    margin-top: 15px;
+    padding: 10px;
+    background-color: green;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.total-page input[type="submit"]:hover {
+    background-color: darkgreen;
+}
+
+/* Result box */
+.total-page .result-box {
+    margin-top: 20px;
+    padding: 12px;
+    background-color: #eef;
+    border: 1px solid #99c;
+    text-align: center;
+}
+
+/* Result text */
+.total-page .result-box h2 {
+    font-size: 16px;
+    color: blue;
+}

@@ -1,0 +1,37 @@
+cd{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<link href="{% static 'css/total.css' %}" rel="stylesheet">
+
+<div class="total-page">   <!-- WRAPPER -->
+
+<form action="{% url 'total' %}" method="post">
+    {% csrf_token %}
+    <h1>Monthly Total Expense</h1>
+
+    <label>Year</label>
+    <select name="year">
+        {% for year in years %}
+        <option value="{{ year }}" {% if year == start_year %}selected{% endif %}>{{ year }}</option>
+        {% endfor %}
+    </select>
+
+    <label>Month</label>
+    <select name="month">
+        {% for month in months %}
+        <option value="{{ forloop.counter }}" {% if forloop.counter == start_month %}selected{% endif %}>{{ month }}</option>
+        {% endfor %}
+    </select>
+
+    <input type="submit" value="Filter">
+
+    <div class="result-box">
+        <h2>Total expense in this month is ---- ₹{{ total_expense }}</h2>
+        <h2>Yearly expense is --- ₹{{ year_total }}</h2>
+    </div>
+</form>
+
+</div>  <!-- END WRAPPER -->
+
+{% endblock %}
